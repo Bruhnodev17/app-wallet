@@ -3,7 +3,7 @@ module.exports = function (api) {
     return {
         presets: ["babel-preset-expo"],
         plugins: [
-            "module-resolver", {
+            ["module-resolver", {
                 root: ["./src"],
                 extensions: [".js", ".jsx", ".ts", ".tsx"],
                 alias: {
@@ -17,7 +17,7 @@ module.exports = function (api) {
                     "@styles": "./src/styles",
                     "@utils": "./src/utils",
                 },
-            },
+            }],
         ],
     };
 };
