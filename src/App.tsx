@@ -2,6 +2,7 @@ import React from "react";
 import AppLoading from "expo-app-loading"
 import { View, Text } from 'react-native';
 import { ThemeProvider } from "styled-components/native"
+import { StatusBar } from "expo-status-bar";
 
 import {
     useFonts,
@@ -32,6 +33,11 @@ const App: React.FC = () => {
     }
     return (
         <ThemeProvider theme={COLORS}>
+            <StatusBar
+            style="dark"
+            translucent
+            backgroundColor="transparent"
+            />
             <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
                 <Text>Hello World! 😎</Text>
             </View>
