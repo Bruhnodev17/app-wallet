@@ -17,6 +17,7 @@ import { DMSans_400Regular } from "@expo-google-fonts/dm-sans";
 import { DMSerifDisplay_400Regular } from "@expo-google-fonts/dm-serif-display";
 
 import COLORS from "../src/styles/theme";
+import Login from "./screens/Login/Login";
 
 const App: React.FC = () => {
     const [fontsLoaded] = useFonts({
@@ -38,8 +39,8 @@ const App: React.FC = () => {
             translucent
             backgroundColor="transparent"
             />
-            <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-                <Text>Hello World! 😎</Text>
+            <View >
+                <Login/>
             </View>
         </ThemeProvider>
     )
