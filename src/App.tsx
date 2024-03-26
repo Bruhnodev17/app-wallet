@@ -39,7 +39,7 @@ const App: React.FC = () => {
             translucent
             backgroundColor="transparent"
             />
-            <View >
+            <View>
                 <Login/>
             </View>
         </ThemeProvider>
