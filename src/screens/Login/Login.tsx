@@ -2,6 +2,8 @@ import React from "react";
 import { SafeAreaView, Text } from "react-native";
 import ButtonSocialGoogle from "@src/components/ButtonSocialGoogle/ButtonSocialGoogle";
 import ButtonSocial from "@src/components/ButtonSocial/ButtonSocial";
+import Input from "@src/components/Input/Input";
+
 import {
     Container,
     ContentHeader,
@@ -26,7 +28,9 @@ const Login: React.FC = () => {
                     </ViewButton>
                 </ContentHeader>
 
-                <ContentBody></ContentBody>
+                <ContentBody>
+                    <Input />
+                </ContentBody>
 
                 <ContentFooter></ContentFooter>
             </Container>
