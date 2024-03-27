@@ -5,6 +5,7 @@ import React, {
 import { useField } from "@unform/core";
 import { Text, TextInputProps } from "react-native";
 import { Ionicons } from "@expo/vector-icons"
+import { useTheme } from "styled-components";
 
 import { Container, IContainer, InputText } from "./styles";
 
@@ -31,14 +32,33 @@ const Input: React.ForwardRefRenderFunction<InputRef, InputProps> = ({
     containerStyle,
     ...rest
 }) => {
+    const theme = useTheme();
 
-    const [hasErrors, setHasErrors] = useState(false);
+
+    const [hasError, setHasError] = useState(false);
     const [isFocused, setIsFocused] = useState(false);
     const [isFilled, setIsFilled] = useState(false);
 
     return (
-        <Container>
-            <Text>Input</Text>
+        <Container style={containerStyle}>
+            <IContainer isFilled={isFilled} hasErrors={hasError} isFocused={isFocused}>
+
+                <Ionicons
+                    name={iconName}
+                    size={25}
+                    color=
+                    {
+                        isFocused || hasError || isFilled ?
+                            theme.COLORS.BLUE1 : theme.COLORS.GRAY5
+                    }
+                />
+            </IContainer>
+
+            <InputText
+                isFilled={isFilled}
+                hasErrors={hasError}
+                isFocused={isFocused}
+            />
         </Container>
     )
 }
