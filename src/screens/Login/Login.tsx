@@ -33,11 +33,13 @@ const Login: React.FC = () => {
                     <Input leftIcon
                         iconSize={25}
                         iconName="mail-outline"
-                        iconColor={theme.COLORS.TEXTDARK} />
+                        iconColor={theme.COLORS.TEXTDARK}
+                        placeholder="Digite seu e-mail"/>
                     <Input leftIcon
                     iconSize={25}
                     iconName="lock-closed-outline"
-                    iconColor={theme.COLORS.TEXTDARK}/>
+                    iconColor={theme.COLORS.TEXTDARK}
+                    placeholder="Digite sua senha"/>
                 </ContentBody>
 
                 <ContentFooter></ContentFooter>
