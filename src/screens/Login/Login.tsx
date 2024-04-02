@@ -11,6 +11,7 @@ import {
     ContentFooter,
     Title, Description, ViewButton
 } from "./styles";
+import theme from "@src/styles/theme";
 
 const Login: React.FC = () => {
     return (
@@ -23,14 +24,20 @@ const Login: React.FC = () => {
                     <Description>Entrar com redes sociais</Description>
 
                     <ViewButton>
-                        <ButtonSocialGoogle title="Google"/>
-                        <ButtonSocial iconName="facebook" title="Facebook"/>
+                        <ButtonSocialGoogle title="Google" />
+                        <ButtonSocial iconName="facebook" title="Facebook" />
                     </ViewButton>
                 </ContentHeader>
 
                 <ContentBody>
-                    <Input leftIcon/>
-                    <Input rightIcon/>
+                    <Input leftIcon
+                        iconSize={25}
+                        iconName="mail-outline"
+                        iconColor={theme.COLORS.TEXTDARK} />
+                    <Input leftIcon
+                    iconSize={25}
+                    iconName="lock-closed-outline"
+                    iconColor={theme.COLORS.TEXTDARK}/>
                 </ContentBody>
 
                 <ContentFooter></ContentFooter>

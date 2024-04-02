@@ -6,9 +6,12 @@ import { Container, InputContainer } from './styles'
 interface InputProps {
     rightIcon?: boolean;
     leftIcon?: boolean;
+    iconName: string;
+    iconSize?: number;
+    iconColor?: string;
 }
 
-const Input: React.FC<InputProps> = ({ rightIcon, leftIcon }) => {
+const Input: React.FC<InputProps> = ({ rightIcon, leftIcon, iconName, iconSize, iconColor }) => {
 
     const { COLORS } = useTheme();
 
@@ -16,20 +19,20 @@ const Input: React.FC<InputProps> = ({ rightIcon, leftIcon }) => {
         <Container>
             {leftIcon && (
                 <Ionicons
-                    name="mail-outline"
-                    size={25}
-                    color={COLORS.TEXTDARK}
-                    style={{padding: 3, marginLeft:20}}
+                    name={iconName}
+                    size={iconSize}
+                    color={iconColor || COLORS.TEXTDARK}
+                    style={{padding: 3, }}
                 />
             )}
             <InputContainer />
 
             {rightIcon && (
                 <Ionicons
-                name='lock-closed-outline'
-                size={25}
-                color={COLORS.TEXTDARK}
-                style={{padding: 3, marginLeft: 20}}
+                name={iconName}
+                size={iconSize}
+                color={iconColor || COLORS.TEXTDARK}
+                style={{padding: 3, }}
                 />
             )}
         </Container>
