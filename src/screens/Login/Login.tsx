@@ -2,7 +2,7 @@ import React from "react";
 import { SafeAreaView, Text } from "react-native";
 import ButtonSocialGoogle from "@src/components/ButtonSocialGoogle/ButtonSocialGoogle";
 import ButtonSocial from "@src/components/ButtonSocial/ButtonSocial";
-import Button from "@src/components/Button/Button";
+import {Button} from "@src/components/Button/Button";
 import Input from "@src/components/Input";
 import {
     Container,
@@ -41,7 +41,9 @@ const Login: React.FC = () => {
                         iconColor={theme.COLORS.TEXTDARK}
                         placeholder="Digite sua senha" />
 
-                        <Button />
+                        <Button
+                        title="Entrar"
+                        onPress={()=>{}}/>
                 </ContentBody>
 
                 <ContentFooter></ContentFooter>
