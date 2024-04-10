@@ -5,10 +5,10 @@ import { RFValue } from "react-native-responsive-fontsize";
 
 export const Container = styled.Pressable`
     width: 100%;
-    height: 50px;
+    height: 70px;
     align-items: center;
     justify-content: center;
-    margin-top: ${RFValue(15)}px;
+    margin-top: ${RFValue(30)}px;
     background-color: ${theme.COLORS.PRIMARY};
     border-radius: ${RFValue(15)}px;
 `;
