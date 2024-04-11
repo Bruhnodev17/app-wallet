@@ -1,9 +1,8 @@
 import styled from "styled-components/native";
 import theme from "@src/styles/theme";
-import { Pressable,Text } from "react-native";
 import { RFValue } from "react-native-responsive-fontsize";
 
-export const Container = styled.Pressable`
+export const Container = styled.TouchableOpacity`
     width: 100%;
     height: 70px;
     align-items: center;
@@ -18,4 +17,10 @@ export const Title = styled.Text`
     font-size: ${RFValue(18)}px;
     font-family: ${theme.FONTS.POPPINSMEDIUM};
 `;
+
+export const Content = styled.View `
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+`
 

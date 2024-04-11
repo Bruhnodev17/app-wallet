@@ -100,7 +100,7 @@ const buttonBlack: ButtonVariant = {
     }
 }
 
-export const variantes = {
+export const variants = {
     primary: ButtonPrimary,
     outline: buttonOutline,
     black: buttonBlack,
