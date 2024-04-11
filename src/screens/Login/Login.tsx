@@ -2,7 +2,7 @@ import React from "react";
 import { SafeAreaView, Text } from "react-native";
 import ButtonSocialGoogle from "@src/components/ButtonSocialGoogle/ButtonSocialGoogle";
 import ButtonSocial from "@src/components/ButtonSocial/ButtonSocial";
-import {Button} from "@src/components/Button/Button";
+import { Button } from "@src/components/Button/CustomButton";
 import Input from "@src/components/Input";
 import {
     Container,
@@ -43,7 +43,9 @@ const Login: React.FC = () => {
 
                         <Button
                         title="Entrar"
-                        onPress={()=>{}}/>
+                        variant="primary"
+                        onPress={() => { } }
+                        style={{marginBottom: 20}}/>
                 </ContentBody>
 
                 <ContentFooter></ContentFooter>

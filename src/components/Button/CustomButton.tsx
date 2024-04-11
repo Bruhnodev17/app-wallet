@@ -44,14 +44,14 @@ export const Button: React.FC<IButtonProps> = ({
                 <Content>
                     {iconName && (
                         <AntDesign name={iconName} size={25} color={buttonStyle.icon.color}
-                        style={{marginRight: 15}} />
+                            style={{ marginRight: 15 }} />
                     )}
                     <Title>{title}</Title>
 
                 </Content>
             )}
-            <Title>{title}</Title>
         </Container>
     );
 }
+
 
