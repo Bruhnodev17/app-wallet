@@ -4,7 +4,7 @@ import { RFValue } from "react-native-responsive-fontsize";
 import theme from "@src/styles/theme";
 
 export const Button = styled(RectButton) `
-    width: ${RFValue(130)}px;
+    width: ${RFValue(150)}px;
     height: ${RFValue(60)}px;
     border-radius: ${RFValue(5)}px;
     align-items: center;
