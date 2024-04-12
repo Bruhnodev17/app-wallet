@@ -15,7 +15,7 @@ import {
 } from "./styles";
 import theme from "@src/styles/theme";
 
-const Login: React.FC = () => {
+export const Login: React.FC = () => {
     return (
             <KeyboardAvoidingView
             behavior="position"
@@ -82,4 +82,4 @@ const Login: React.FC = () => {
     );
 };
 
-export default Login;
+
