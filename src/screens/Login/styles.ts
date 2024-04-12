@@ -39,13 +39,12 @@ export const Description = styled.Text`
 export const ContentFooter = styled.View`
     align-items: center;
     justify-content: center;
-    position: fixed;
-    bottom: -50px;
+    margin-top: 30px;
 `
 
 
 export const ButtonSignUp = styled.Pressable`
-     align-items: center;
+    align-items: center;
     justify-content: center;
     flex-direction: row;
 `

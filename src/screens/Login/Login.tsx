@@ -1,5 +1,5 @@
 import React from "react";
-import { SafeAreaView, Text } from "react-native";
+import { SafeAreaView, KeyboardAvoidingView } from "react-native";
 import ButtonSocialGoogle from "@src/components/ButtonSocialGoogle/ButtonSocialGoogle";
 import ButtonSocial from "@src/components/ButtonSocial/ButtonSocial";
 import { Button } from "@src/components/Button/CustomButton";
@@ -17,7 +17,10 @@ import theme from "@src/styles/theme";
 
 const Login: React.FC = () => {
     return (
-        <SafeAreaView>
+            <KeyboardAvoidingView
+            behavior="position"
+            enabled
+            >
             <Container>
 
                 <ContentHeader>
@@ -73,7 +76,7 @@ const Login: React.FC = () => {
                     </ButtonSignUp>
                 </ContentFooter>
             </Container>
-        </SafeAreaView>
+            </KeyboardAvoidingView>
     );
 };
 
