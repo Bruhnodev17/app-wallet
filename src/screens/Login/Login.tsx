@@ -11,6 +11,7 @@ import {
     ContentFooter,
     Title, Description, ViewButton,
     ButtonSignUp, TitleButtonSignUp1, TitleButtonSignUp2,
+    ContentForgotPassword, ContentButtonForgotPassword, ContentTitleForgotPassword,
 } from "./styles";
 import theme from "@src/styles/theme";
 
@@ -38,7 +39,7 @@ const Login: React.FC = () => {
                         placeholder="Digite seu e-mail"
                         autoCapitalize="none"
                         autoCorrect={false}
-                        keyboardType="email-address"/>
+                        keyboardType="email-address" />
                     <Input
                         leftIcon
                         rightIcon
@@ -50,17 +51,23 @@ const Login: React.FC = () => {
                         keyboardType="default"
                         autoCorrect={false}
                         autoCapitalize="none"
-                        />
+                    />
 
-                        <Button
+                    <ContentForgotPassword>
+                        <ContentButtonForgotPassword>
+                            <ContentTitleForgotPassword>Recuperar Senha</ContentTitleForgotPassword>
+                        </ContentButtonForgotPassword>
+                    </ContentForgotPassword>
+
+                    <Button
                         title="Entrar"
                         variant="primary"
                         onPress={() => { } }
-                        style={{marginBottom: 20}}/>
+                        style={{ marginBottom: 20 }} iconName={"login"} />
                 </ContentBody>
 
                 <ContentFooter>
-                    <ButtonSignUp>
+                    <ButtonSignUp onpress={() => {} }>
                         <TitleButtonSignUp1>Não tem cadastro ainda?</TitleButtonSignUp1>
                         <TitleButtonSignUp2>Cadastre-se</TitleButtonSignUp2>
                     </ButtonSignUp>

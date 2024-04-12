@@ -1,7 +1,7 @@
 import styled from "styled-components/native";
-import {RFValue} from "react-native-responsive-fontsize"
+import { RFValue } from "react-native-responsive-fontsize"
 import theme from "@src/styles/theme";
-import { Pressable, Text } from "react-native";
+import { Pressable } from "react-native";
 
 export const Container = styled.View`
     padding: ${RFValue(20)}px;
@@ -33,7 +33,7 @@ export const Description = styled.Text`
     margin-top: ${RFValue(60)}px;
     font-size: ${RFValue(18)}px;
     margin-bottom: ${RFValue(10)}px;
-    font-family: ${({}) => theme.FONTS.POPPINSMEDIUM};
+    font-family: ${({ }) => theme.FONTS.POPPINSMEDIUM};
 `
 
 export const ContentFooter = styled.View`
@@ -41,7 +41,6 @@ export const ContentFooter = styled.View`
     justify-content: center;
     position: fixed;
     bottom: -50px;
-
 `
 
 
@@ -53,15 +52,34 @@ export const ButtonSignUp = styled.Pressable`
 
 export const TitleButtonSignUp1 = styled.Text`
     font-size: 17px;
-    color: ${({}) => theme.COLORS.GRAY4};
-    font-family: ${({}) => theme.FONTS.POPPINSMEDIUM};
+    color: ${({ }) => theme.COLORS.GRAY4};
+    font-family: ${({ }) => theme.FONTS.POPPINSMEDIUM};
 
 `
 
-export const  TitleButtonSignUp2 = styled.Text`
+export const TitleButtonSignUp2 = styled.Text`
     font-size: 17px;
-    color: ${({}) => theme.COLORS.BLUE};
-    font-family: ${({}) => theme.FONTS.POPPINSBOLD};
+    color: ${({ }) => theme.COLORS.BLUE};
+    font-family: ${({ }) => theme.FONTS.POPPINSBOLD};
     margin-left: 10px;
 `
 
+export const ContentForgotPassword = styled.View`
+    width: 100%;
+    align-items: center;
+    padding: 10px 0;
+    justify-content: flex-end;
+    margin-top: 10px;
+    `
+
+export const ContentButtonForgotPassword = styled(Pressable)`
+    justify-content: flex-end;
+`
+
+export const ContentTitleForgotPassword = styled.Text`
+    align-items: flex-end;
+    font-size: 17px;
+    color: ${({}) => theme.COLORS.GRAY3};
+    font-family: ${({}) => theme.FONTS.POPPINSREGULAR};
+
+`
