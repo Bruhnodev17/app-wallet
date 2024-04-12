@@ -34,12 +34,22 @@ const Login: React.FC = () => {
                         iconSize={25}
                         iconName="mail-outline"
                         iconColor={theme.COLORS.TEXTDARK}
-                        placeholder="Digite seu e-mail" />
-                    <Input leftIcon
+                        placeholder="Digite seu e-mail"
+                        autoCapitalize="none"
+                        autoCorrect={false}
+                        keyboardType="email-address"/>
+                    <Input
+                        leftIcon
+                        rightIcon
                         iconSize={25}
                         iconName="lock-closed-outline"
                         iconColor={theme.COLORS.TEXTDARK}
-                        placeholder="Digite sua senha" />
+                        placeholder="Digite sua senha"
+                        securetextentry
+                        keyboardType="default"
+                        autoCorrect={false}
+                        autoCapitalize="none"
+                        />
 
                         <Button
                         title="Entrar"
