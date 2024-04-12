@@ -16,6 +16,7 @@ export const Title = styled.Text`
     color: ${theme.COLORS.WHITE};
     font-size: ${RFValue(18)}px;
     font-family: ${theme.FONTS.POPPINSMEDIUM};
+    color: #000;
 `;
 
 export const Content = styled.View `

@@ -2,7 +2,7 @@ import React from "react";
 import { SafeAreaView, KeyboardAvoidingView } from "react-native";
 import ButtonSocialGoogle from "@src/components/ButtonSocialGoogle/ButtonSocialGoogle";
 import ButtonSocial from "@src/components/ButtonSocial/ButtonSocial";
-import { Button } from "@src/components/Button/CustomButton";
+import { Button } from "@src/components/CustomButton/CustomButton";
 import Input from "@src/components/Input";
 import {
     Container,
@@ -57,9 +57,11 @@ const Login: React.FC = () => {
                     />
 
                     <ContentForgotPassword>
-                        <ContentButtonForgotPassword>
-                            <ContentTitleForgotPassword>Recuperar Senha</ContentTitleForgotPassword>
-                        </ContentButtonForgotPassword>
+                        <Button
+                        title="Recuperar Senha"
+                        onPress={() => {}}
+                        variant="transparent"
+                        iconName="warning" />
                     </ContentForgotPassword>
 
                     <Button

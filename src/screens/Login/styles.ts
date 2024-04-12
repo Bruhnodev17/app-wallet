@@ -66,9 +66,7 @@ export const TitleButtonSignUp2 = styled.Text`
 export const ContentForgotPassword = styled.View`
     width: 100%;
     align-items: center;
-    padding: 10px 0;
     justify-content: flex-end;
-    margin-top: 10px;
     `
 
 export const ContentButtonForgotPassword = styled(Pressable)`
