@@ -9,7 +9,8 @@ import {
     ContentHeader,
     ContentBody,
     ContentFooter,
-    Title, Description, ViewButton
+    Title, Description, ViewButton,
+    ButtonSignUp, TitleButtonSignUp1, TitleButtonSignUp2,
 } from "./styles";
 import theme from "@src/styles/theme";
 
@@ -58,7 +59,12 @@ const Login: React.FC = () => {
                         style={{marginBottom: 20}}/>
                 </ContentBody>
 
-                <ContentFooter></ContentFooter>
+                <ContentFooter>
+                    <ButtonSignUp>
+                        <TitleButtonSignUp1>Não tem cadastro ainda?</TitleButtonSignUp1>
+                        <TitleButtonSignUp2>Cadastre-se</TitleButtonSignUp2>
+                    </ButtonSignUp>
+                </ContentFooter>
             </Container>
         </SafeAreaView>
     );
