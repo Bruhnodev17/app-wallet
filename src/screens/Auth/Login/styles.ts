@@ -43,7 +43,7 @@ export const ContentFooter = styled.View`
 `
 
 
-export const ButtonSignUp = styled.Pressable`
+export const ButtonSignUp = styled.TouchableOpacity`
     align-items: center;
     justify-content: center;
     flex-direction: row;

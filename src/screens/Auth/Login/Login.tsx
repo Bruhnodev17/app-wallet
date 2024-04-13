@@ -1,5 +1,6 @@
 import React from "react";
-import { SafeAreaView, KeyboardAvoidingView } from "react-native";
+import { KeyboardAvoidingView } from "react-native";
+import { useNavigation } from "@react-navigation/native"
 import ButtonSocialGoogle from "@src/components/ButtonSocialGoogle/ButtonSocialGoogle";
 import ButtonSocial from "@src/components/ButtonSocial/ButtonSocial";
 import { Button } from "@src/components/CustomButton/CustomButton";
@@ -16,11 +17,18 @@ import {
 import theme from "@src/styles/theme";
 
 export const Login: React.FC = () => {
+
+    const navigation = useNavigation()
+
+    const handleRegister = () => {
+        navigation.navigate('Register')
+    }
+
     return (
-            <KeyboardAvoidingView
+        <KeyboardAvoidingView
             behavior="position"
             enabled
-            >
+        >
             <Container>
 
                 <ContentHeader>
@@ -58,27 +66,27 @@ export const Login: React.FC = () => {
 
                     <ContentForgotPassword>
                         <Button
-                        title="Recuperar Senha"
-                        onPress={() => {}}
-                        variant="transparent"
-                        iconName="warning" />
+                            title="Recuperar Senha"
+                            onPress={() => { }}
+                            variant="transparent"
+                            iconName="warning" />
                     </ContentForgotPassword>
 
                     <Button
                         title="Entrar"
                         variant="primary"
-                        onPress={() => { } }
+                        onPress={() => { }}
                         style={{ marginBottom: 20 }} iconName={"login"} />
                 </ContentBody>
 
                 <ContentFooter>
-                    <ButtonSignUp onpress={() => {} }>
+                    <ButtonSignUp onPress={handleRegister}>
                         <TitleButtonSignUp1>Não tem cadastro ainda?</TitleButtonSignUp1>
                         <TitleButtonSignUp2>Cadastre-se</TitleButtonSignUp2>
                     </ButtonSignUp>
                 </ContentFooter>
             </Container>
-            </KeyboardAvoidingView>
+        </KeyboardAvoidingView>
     );
 };
 
