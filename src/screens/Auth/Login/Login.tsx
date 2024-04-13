@@ -36,7 +36,7 @@ export const Login: React.FC = () => {
             <Container>
 
                 <ContentHeader>
-                    <Title>Seja Bem Vindo(a){"\n"} a Wallet App! 🪙</Title>
+                    <Title>Seja Bem Vindo(a){"\n"} a App Wallet! 🪙</Title>
 
                     <Description>Entrar com redes sociais</Description>
 
