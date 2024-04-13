@@ -24,6 +24,10 @@ export const Login: React.FC = () => {
         navigation.navigate('Register')
     }
 
+    const handleRecoveryPassword = () => {
+        navigation.navigate('RecoveryPassword')
+    }
+
     return (
         <KeyboardAvoidingView
             behavior="position"
@@ -32,7 +36,7 @@ export const Login: React.FC = () => {
             <Container>
 
                 <ContentHeader>
-                    <Title>Seja Bem Vindo(a){"\n"} a Wallet App!</Title>
+                    <Title>Seja Bem Vindo(a){"\n"} a Wallet App! 🪙</Title>
 
                     <Description>Entrar com redes sociais</Description>
 
@@ -65,13 +69,11 @@ export const Login: React.FC = () => {
                     />
 
                     <ContentForgotPassword>
-                        <Button
-                            title="Recuperar Senha"
-                            onPress={() => { }}
-                            variant="transparent"
-                            iconName="warning"
-                            style={{marginTop:-10,}}
-                            />
+
+                            <ContentButtonForgotPassword onPress={handleRecoveryPassword}>
+                                <ContentTitleForgotPassword>Recuperar Senha</ContentTitleForgotPassword>
+                            </ContentButtonForgotPassword>
+
                     </ContentForgotPassword>
 
                     <Button

@@ -1,7 +1,7 @@
 import styled from "styled-components/native";
 import { RFValue } from "react-native-responsive-fontsize"
 import theme from "@src/styles/theme";
-import { Pressable } from "react-native";
+import { TouchableOpacity } from "react-native";
 
 export const Container = styled.View`
     padding: ${RFValue(20)}px;
@@ -69,13 +69,14 @@ export const ContentForgotPassword = styled.View`
     justify-content: flex-end;
     `
 
-export const ContentButtonForgotPassword = styled(Pressable)`
-    justify-content: flex-end;
+export const ContentButtonForgotPassword = styled.TouchableOpacity`
+    justify-content: center;
 `
 
 export const ContentTitleForgotPassword = styled.Text`
     align-items: flex-end;
-    font-size: 14px;
+    font-size: 16px;
+    margin-top: 30px;
     color: ${({}) => theme.COLORS.GRAY3};
     font-family: ${({}) => theme.FONTS.POPPINSREGULAR};
 

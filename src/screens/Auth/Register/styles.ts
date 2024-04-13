@@ -58,3 +58,5 @@ export const ButtonFooter = styled.TouchableOpacity`
     margin-left: 10px;
 
   `
+
+
