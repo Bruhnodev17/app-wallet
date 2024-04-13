@@ -25,7 +25,7 @@ export const Register = () => {
         <Container>
             <ContentHeader>
                 <Title>Seja bem vindo (a) {'\n'} a App Wallet! 🪙</Title>
-                <Description>CADASTRO</Description>
+                <Description>CADASTRE-SE</Description>
             </ContentHeader>
 
             <ContentBody>
