@@ -2,6 +2,7 @@ import { View, Text } from 'react-native'
 import React from 'react'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import theme from '@src/styles/theme'
+import { CreditCard } from 'phosphor-react-native';
 
 import { Wallet } from '@src/screens/Tab/_Wallet'
 import { Notification } from '@src/screens/Tab/Notification'
@@ -25,26 +26,44 @@ export const TabRoutes = () => {
                 },
                 tabBarLabelStyle: {
                     fontSize: 12,
-                    shadowOpacity: 0.2,
+                    color: theme.COLORS.GRAY3
                 }
             }}
         >
             <Screen
                 name='Wallet'
                 component={Wallet}
+                options={{
+                    tabBarLabel: "Home",
+                    tabBarIcon: ({ focused }) => (
+                        <View>
+                            {focused ? (
+                                <CreditCard size={25} weight='fill'
+                                color={focused ? theme.COLORS.GRAY1 : theme.COLORS.GRAY3} />
+                            ):(
+                                <CreditCard size={25} weight='light'
+                                color={focused ? theme.COLORS.GRAY1 : theme.COLORS.GRAY3} />
+                            )}
+
+                        </View>
+                    )
+                }}
             />
 
             <Screen
                 name='Report'
                 component={Report}
+                options={{
+
+                }}
             />
             <Screen
-             name='Notification'
-             component={Notification}
-             />
+                name='Notification'
+                component={Notification}
+            />
             <Screen
-            name='Settings'
-            component={Settings}
+                name='Settings'
+                component={Settings}
             />
         </Navigator>
     )
