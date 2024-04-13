@@ -75,8 +75,9 @@ export const ContentButtonForgotPassword = styled(Pressable)`
 
 export const ContentTitleForgotPassword = styled.Text`
     align-items: flex-end;
-    font-size: 17px;
+    font-size: 14px;
     color: ${({}) => theme.COLORS.GRAY3};
     font-family: ${({}) => theme.FONTS.POPPINSREGULAR};
 
 `
+

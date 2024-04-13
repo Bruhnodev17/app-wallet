@@ -69,14 +69,16 @@ export const Login: React.FC = () => {
                             title="Recuperar Senha"
                             onPress={() => { }}
                             variant="transparent"
-                            iconName="warning" />
+                            iconName="warning"
+                            style={{marginTop:-10,}}
+                            />
                     </ContentForgotPassword>
 
                     <Button
                         title="Entrar"
                         variant="primary"
                         onPress={() => { }}
-                        style={{ marginBottom: 20 }} iconName={"login"} />
+                        style={{ marginBottom: 10 }} iconName={"login"} />
                 </ContentBody>
 
                 <ContentFooter>
