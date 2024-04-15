@@ -1,16 +1,11 @@
 import { View, Text, TouchableOpacity } from 'react-native'
 import React from 'react'
 
-import { Payments } from "../../../assets/export.png"
-import { Transfer } from "../../../assets/convert.png"
-import { PayOut } from "../../../assets/money-send.png"
-import { TopUp } from "../../../assets/add-circle.png"
-
 import {
     Container, Content, ViewContent,
     ViewBalanceLeft, ViewBalanceRight, TitleValue, TitleCard,
     TitleValueAcount, TitleCardBank, BodyButtons,
-    IconPayment, IconTransfer, IconPayOut, IconTopUp,
+    IconPayment, IconTransfer, IconPayOut, IconTopUp, TitleIcon
 } from './styles'
 
 import { Header } from '@src/components/Header/Header'
@@ -36,17 +31,24 @@ export const Wallet = () => {
                 </Content>
 
                 <BodyButtons>
-                    <TouchableOpacity>
-                        <IconPayment source={Payments} />
+                    <TouchableOpacity style={{alignItems: "center"}}>
+                        <IconTransfer source={require('../../../assets/export.png')} />
+                        <TitleIcon>Transferências</TitleIcon>
                     </TouchableOpacity>
-                    <TouchableOpacity>
-                        <IconTransfer source={Transfer} />
+
+                    <TouchableOpacity style={{alignItems: "center"}}>
+                        <IconPayment source={require('../../../assets/convert.png')} />
+                        <TitleIcon>Pagamentos</TitleIcon>
                     </TouchableOpacity>
-                    <TouchableOpacity>
-                        <IconPayOut source={PayOut} />
+
+                    <TouchableOpacity style={{alignItems: "center"}}>
+                        <IconPayOut source={require('../../../assets/money-send.png')} />
+                        <TitleIcon>Pagamento</TitleIcon>
                     </TouchableOpacity>
-                    <TouchableOpacity>
-                        <IconTopUp source={TopUp} />
+
+                    <TouchableOpacity style={{alignItems: "center"}}>
+                        <IconTopUp source={require('../../../assets/add-circle.png')} />
+                        <TitleIcon>Mais Opções</TitleIcon>
                     </TouchableOpacity>
 
                 </BodyButtons>

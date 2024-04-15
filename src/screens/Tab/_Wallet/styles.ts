@@ -56,29 +56,40 @@ export const TitleCardBank = styled.Text `
 `
 
 export const BodyButtons = styled.View `
-width: 100%;
+    width: 100%;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding: 20px;
 `
 
-export const  IconPayment = styled.Image`
-    width: 50px;
-    height: 50px;
+export const IconPayment = styled.Image`
+    width: 70px;
+    height: 70px;
+
 `
 
-export const  IconTransfer = styled.Image`
-     width: 50px;
-    height: 50px;
+export const IconTransfer = styled.Image`
+     width: 70px;
+    height: 70px;
 `
 
-export const  IconPayOut = styled.Image`
-     width: 50px;
-    height: 50px;
+export const IconPayOut = styled.Image`
+     width: 70px;
+    height: 70px;
 `
 
 export const  IconTopUp = styled.Image`
-     width: 50px;
-    height: 50px;
+     width: 70px;
+    height: 70px;
+`
+
+export const TitleIcon = styled.Text`
+    text-align: center;
+    font-size: 11px;
+    padding: 10px;
+    color: ${({}) => theme.COLORS.PURPLEDARK1};
+    font-family: ${({}) => theme.FONTS.POPPINSMEDIUM};
+
 `
 
