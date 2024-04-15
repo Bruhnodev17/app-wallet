@@ -14,8 +14,8 @@ export const ViewContent = styled.View`
 
 export const Content = styled.View `
     background-color: ${({})=> theme.COLORS.PURPLEDARK3};
-    width: 310px;
-    height: 146px;
+    width: 340px;
+    height: 150px;
     border-radius: 50px;
     align-items: center;
     justify-content: space-around;
@@ -93,3 +93,7 @@ export const TitleIcon = styled.Text`
 
 `
 
+export const FooterList = styled.View`
+
+
+`

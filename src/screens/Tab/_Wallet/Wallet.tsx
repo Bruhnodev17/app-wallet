@@ -1,14 +1,16 @@
-import { View, Text, TouchableOpacity } from 'react-native'
+import { View, Text, TouchableOpacity, FlatList } from 'react-native'
 import React from 'react'
 
 import {
     Container, Content, ViewContent,
     ViewBalanceLeft, ViewBalanceRight, TitleValue, TitleCard,
     TitleValueAcount, TitleCardBank, BodyButtons,
-    IconPayment, IconTransfer, IconPayOut, IconTopUp, TitleIcon
+    IconPayment, IconTransfer, IconPayOut, IconTopUp, TitleIcon,
+    FooterList
 } from './styles'
 
 import { Header } from '@src/components/Header/Header'
+import { transaction } from '@src/utils/transctions'
 
 export const Wallet = () => {
     return (
@@ -31,27 +33,38 @@ export const Wallet = () => {
                 </Content>
 
                 <BodyButtons>
-                    <TouchableOpacity style={{alignItems: "center"}}>
+                    <TouchableOpacity style={{ alignItems: "center" }}>
                         <IconTransfer source={require('../../../assets/export.png')} />
                         <TitleIcon>Transferências</TitleIcon>
                     </TouchableOpacity>
 
-                    <TouchableOpacity style={{alignItems: "center"}}>
+                    <TouchableOpacity style={{ alignItems: "center" }}>
                         <IconPayment source={require('../../../assets/convert.png')} />
                         <TitleIcon>Pagamentos</TitleIcon>
                     </TouchableOpacity>
 
-                    <TouchableOpacity style={{alignItems: "center"}}>
+                    <TouchableOpacity style={{ alignItems: "center" }}>
                         <IconPayOut source={require('../../../assets/money-send.png')} />
                         <TitleIcon>Pagamento</TitleIcon>
                     </TouchableOpacity>
 
-                    <TouchableOpacity style={{alignItems: "center"}}>
+                    <TouchableOpacity style={{ alignItems: "center" }}>
                         <IconTopUp source={require('../../../assets/add-circle.png')} />
                         <TitleIcon>Mais Opções</TitleIcon>
                     </TouchableOpacity>
 
                 </BodyButtons>
+
+                <FooterList>
+                    <FlatList
+                    data={transaction}
+                    renderItem={({item}) => (
+                        <View />
+                    )}
+                    >
+
+                    </FlatList>
+                </FooterList>
             </ViewContent>
         </Container>
     )

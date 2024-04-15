@@ -1,0 +1,28 @@
+import NetFlixIcon from "../../src/assets/netflix.png"
+import PaypalIcon from "../../src/assets/paypal.png"
+import InputsIcon from "../../src/assets/entrada.png"
+
+
+export const transaction = [
+    {
+        id: "1",
+        title: "Pagamento NetFlix",
+        subtitle: "Pagamento referente à NetFlix",
+        amount: 49.99,
+        icon: NetFlixIcon,
+    },
+    {
+        id: "1",
+        title: "Pagamento Boleto Paypal",
+        subtitle: "Pagamento referente à Boleto Paypal",
+        amount: 74.50,
+        icon: PaypalIcon,
+    },
+    {
+        id: "1",
+        title: "Entradas",
+        subtitle: "Pagamento referente à NetFlix",
+        amount: 249.40,
+        icon: InputsIcon,
+    }
+]
