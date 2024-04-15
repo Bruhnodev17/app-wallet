@@ -17,7 +17,7 @@ import { transaction } from '@src/utils/transctions'
 export const Wallet = () => {
     return (
         <Container>
-            <Header />
+            <Header appName='Wallet' isActiveText AvatarRight />
 
             <ViewContent>
                 <Content>
