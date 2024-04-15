@@ -138,11 +138,24 @@ export const IconTransaction = styled.Image`
 `
 
 export const DetailsTransaction = styled.View`
-    flex: auto;
+    flex: 1;
 `
 
-export const NameTransaction = styled.Text``
+export const NameTransaction = styled.Text`
+    font-size: 16px;
+    color: ${({}) => theme.COLORS.BLACK};
+    font-family: ${({}) => theme.FONTS.POPPINSBOLD};
+`
 
-export const SubTitleTransaction = styled.Text``
+export const SubTitleTransaction = styled.Text`
+    font-size:14px ;
+    color: ${({}) => theme.COLORS.GRAY3};
+    font-family: ${({}) => theme.FONTS.POPPINSREGULAR};
 
-export const AmountTransaction = styled.Text``
+`
+
+export const AmountTransaction = styled.Text`
+    font-size: 15px;
+    color: ${({}) => theme.COLORS.GRAY3};
+    font-family: ${({}) => theme.FONTS.POPPINSREGULAR};
+`

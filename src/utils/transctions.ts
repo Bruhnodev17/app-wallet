@@ -12,17 +12,38 @@ export const transaction = [
         icon: NetFlixIcon,
     },
     {
-        id: "1",
+        id: "2",
         title: "Pagamento Boleto Paypal",
         subtitle: "Pagamento referente à Boleto Paypal",
         amount: 74.50,
         icon: PaypalIcon,
     },
     {
-        id: "1",
+        id: "3",
         title: "Entradas",
-        subtitle: "Pagamento referente à NetFlix",
+        subtitle: "Entrada em dinheiro",
         amount: 249.40,
+        icon: InputsIcon,
+    },
+    {
+        id: "4",
+        title: "Pagamento NetFlix",
+        subtitle: "Pagamento referente à NetFlix",
+        amount: 19.99,
+        icon: NetFlixIcon,
+    },
+    {
+        id: "5",
+        title: "Pagamento Boleto Paypal",
+        subtitle: "Pagamento referente à Boleto Paypal",
+        amount: 154.50,
+        icon: PaypalIcon,
+    },
+    {
+        id: "6",
+        title: "Entradas",
+        subtitle: "Entrada em dinheiro",
+        amount: 29.99,
         icon: InputsIcon,
     }
 ]

@@ -1,4 +1,4 @@
-import { View, Text, TouchableOpacity, FlatList } from 'react-native'
+import { View, Text, TouchableOpacity, FlatList, ScrollView } from 'react-native'
 import React from 'react'
 
 import {
@@ -63,6 +63,7 @@ export const Wallet = () => {
                     <FlatList
                         data={transaction}
                         renderItem={({ item }) => (
+                            <ScrollView scrollEnabled={true} >
                             <ContentFlat>
 
                                     <IconTransaction
@@ -75,6 +76,7 @@ export const Wallet = () => {
                                     <AmountTransaction>R$ {item.amount.toFixed(2)}</AmountTransaction>
 
                             </ContentFlat>
+                            </ScrollView>
                         )}
 
                         ListHeaderComponent={
@@ -85,6 +87,7 @@ export const Wallet = () => {
                                     </ButtonShowAll>
                                 </ContentFlatHeader>
                         }
+                        showsVerticalScrollIndicator={false}
                     >
 
                     </FlatList>
