@@ -6,7 +6,9 @@ import {
     ViewBalanceLeft, ViewBalanceRight, TitleValue, TitleCard,
     TitleValueAcount, TitleCardBank, BodyButtons,
     IconPayment, IconTransfer, IconPayOut, IconTopUp, TitleIcon,
-    FooterList
+    FooterList,  ContentFlat,ContentFlatHeader,Title, ButtonShowAll,
+    ButtonTitleShowAll,ContentFlatFooter, IconTransaction, DetailsTransaction, NameTransaction,
+    SubTitleTransaction, AmountTransaction,
 } from './styles'
 
 import { Header } from '@src/components/Header/Header'
@@ -57,10 +59,26 @@ export const Wallet = () => {
 
                 <FooterList>
                     <FlatList
-                    data={transaction}
-                    renderItem={({item}) => (
-                        <View />
-                    )}
+                        data={transaction}
+                        renderItem={({ item }) => (
+                            <ContentFlat>
+                                <ContentFlatHeader>
+                                    <Title>Minhas transações</Title>
+                                    <ButtonShowAll>
+                                        <ButtonTitleShowAll>Ver Todos</ButtonTitleShowAll>
+                                    </ButtonShowAll>
+                                </ContentFlatHeader>
+
+                                <ContentFlatFooter>
+                                    <IconTransaction />
+                                    <DetailsTransaction>
+                                        <NameTransaction>NetFlix</NameTransaction>
+                                        <SubTitleTransaction>Valor da Netflix</SubTitleTransaction>
+                                    </DetailsTransaction>
+                                    <AmountTransaction>R$ 50.00</AmountTransaction>
+                                </ContentFlatFooter>
+                            </ContentFlat>
+                        )}
                     >
 
                     </FlatList>

@@ -94,6 +94,29 @@ export const TitleIcon = styled.Text`
 `
 
 export const FooterList = styled.View`
-
+    flex: 1;
 
 `
+
+
+export const ContentFlat = styled.View``
+
+export const ContentFlatHeader = styled.View``
+
+export const Title = styled.Text``
+
+export const ButtonShowAll = styled.TouchableOpacity``
+
+export const ButtonTitleShowAll = styled.Text``
+
+export const ContentFlatFooter = styled.View``
+
+export const IconTransaction = styled.Image``
+
+export const DetailsTransaction = styled.View``
+
+export const NameTransaction = styled.Text``
+
+export const SubTitleTransaction = styled.Text``
+
+export const AmountTransaction = styled.Text``
