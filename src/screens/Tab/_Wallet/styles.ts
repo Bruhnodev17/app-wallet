@@ -55,4 +55,30 @@ export const TitleCardBank = styled.Text `
     font-family: ${({}) => theme.FONTS.POPPINSBOLD};
 `
 
+export const BodyButtons = styled.View `
+width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+`
+
+export const  IconPayment = styled.Image`
+    width: 50px;
+    height: 50px;
+`
+
+export const  IconTransfer = styled.Image`
+     width: 50px;
+    height: 50px;
+`
+
+export const  IconPayOut = styled.Image`
+     width: 50px;
+    height: 50px;
+`
+
+export const  IconTopUp = styled.Image`
+     width: 50px;
+    height: 50px;
+`
 
