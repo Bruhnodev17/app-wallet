@@ -94,26 +94,52 @@ export const TitleIcon = styled.Text`
 `
 
 export const FooterList = styled.View`
-    flex: 1;
-
+    width: 100%;
 `
 
 
-export const ContentFlat = styled.View``
+export const ContentFlat = styled.View`
+    padding: 5px 20px;
+    flex-direction: row;
+    justify-content: space-between;
+`
 
-export const ContentFlatHeader = styled.View``
+export const ContentFlatHeader = styled.View`
+    flex-direction: row;
+    padding: 20px;
+    align-items: center;
+    justify-content: space-between;
+`
 
-export const Title = styled.Text``
+export const Title = styled.Text`
+    font-size: 20px;
+    color: ${({}) => theme.COLORS.GRAY1};
+    font-family: ${({}) => theme.FONTS.POPPINSMEDIUM};
+`
 
-export const ButtonShowAll = styled.TouchableOpacity``
+export const ButtonShowAll = styled.TouchableOpacity`
+    border-width: 2px;
+    border-radius: 30px;
+    border-color: ${({}) => theme.COLORS.PURPLEDARK1};
+    padding: 4px;
+`
 
-export const ButtonTitleShowAll = styled.Text``
+export const ButtonTitleShowAll = styled.Text`
+    font-size: 12px;
+    color: ${({}) => theme.COLORS.PURPLEDARK1};
+    font-family: ${({}) => theme.FONTS.POPPINSLIGHT};
+`
 
-export const ContentFlatFooter = styled.View``
 
-export const IconTransaction = styled.Image``
+export const IconTransaction = styled.Image`
+    width: 60px;
+    height: 60px;
 
-export const DetailsTransaction = styled.View``
+`
+
+export const DetailsTransaction = styled.View`
+    flex: auto;
+`
 
 export const NameTransaction = styled.Text``
 

@@ -7,7 +7,7 @@ import {
     TitleValueAcount, TitleCardBank, BodyButtons,
     IconPayment, IconTransfer, IconPayOut, IconTopUp, TitleIcon,
     FooterList,  ContentFlat,ContentFlatHeader,Title, ButtonShowAll,
-    ButtonTitleShowAll,ContentFlatFooter, IconTransaction, DetailsTransaction, NameTransaction,
+    ButtonTitleShowAll, IconTransaction, DetailsTransaction, NameTransaction,
     SubTitleTransaction, AmountTransaction,
 } from './styles'
 
@@ -57,33 +57,38 @@ export const Wallet = () => {
 
                 </BodyButtons>
 
-                <FooterList>
+            </ViewContent>
+
+            <FooterList>
                     <FlatList
                         data={transaction}
                         renderItem={({ item }) => (
                             <ContentFlat>
-                                <ContentFlatHeader>
+
+                                    <IconTransaction
+                                    source={item.icon}
+                                    />
+                                    <DetailsTransaction>
+                                        <NameTransaction>{item.title}</NameTransaction>
+                                        <SubTitleTransaction>{item.subtitle}</SubTitleTransaction>
+                                    </DetailsTransaction>
+                                    <AmountTransaction>R$ {item.amount.toFixed(2)}</AmountTransaction>
+
+                            </ContentFlat>
+                        )}
+
+                        ListHeaderComponent={
+                            <ContentFlatHeader>
                                     <Title>Minhas transações</Title>
                                     <ButtonShowAll>
                                         <ButtonTitleShowAll>Ver Todos</ButtonTitleShowAll>
                                     </ButtonShowAll>
                                 </ContentFlatHeader>
-
-                                <ContentFlatFooter>
-                                    <IconTransaction />
-                                    <DetailsTransaction>
-                                        <NameTransaction>NetFlix</NameTransaction>
-                                        <SubTitleTransaction>Valor da Netflix</SubTitleTransaction>
-                                    </DetailsTransaction>
-                                    <AmountTransaction>R$ 50.00</AmountTransaction>
-                                </ContentFlatFooter>
-                            </ContentFlat>
-                        )}
+                        }
                     >
 
                     </FlatList>
                 </FooterList>
-            </ViewContent>
         </Container>
     )
 }
