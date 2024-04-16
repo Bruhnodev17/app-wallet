@@ -7,10 +7,10 @@ export const Container = styled.View`
 export const Title = styled.Text`
     width: 100%;
     font-size: 30px;
-    color: ${({}) => theme.COLORS.PURPLEDARK3};
+    color: ${({ }) => theme.COLORS.PURPLEDARK3};
     text-align: center;
     margin-top: 50px;
-    font-family: ${({}) => theme.FONTS.POPPINSMEDIUM};
+    font-family: ${({ }) => theme.FONTS.POPPINSMEDIUM};
 `
 
 export const CardImage = styled.Image`
@@ -19,3 +19,66 @@ export const CardImage = styled.Image`
     border-radius: 50px;
     margin-top: 30px;
 `
+
+export const ViewDetails = styled.View`
+    width: 100%;
+    margin-top: 30px;
+    align-items: center;
+`
+
+export const ViewInfo = styled.View`
+    width: 80%;
+    padding: 5px 0;
+    flex-direction: row;
+    align-items: center;
+`
+
+
+export const InfoTitle = styled.Text`
+    font-size: 16px;
+    flex: 1;
+    color: ${({ }) => theme.COLORS.GRAY4};
+    line-height: 20px;
+`
+
+export const Name = styled.Text`
+    font-size: 16px;
+    flex: 1;
+    color: ${({ }) => theme.COLORS.PURPLEDARK1};
+    line-height: 20px;
+    font-family: ${({ }) => theme.FONTS.POPPINSMEDIUM};
+    text-align: right;
+`
+export const Bank = styled.Text`
+    font-size: 16px;
+    flex: 1;
+    color: ${({ }) => theme.COLORS.PURPLEDARK1};
+    line-height: 20px;
+    font-family: ${({ }) => theme.FONTS.POPPINSMEDIUM};
+    text-align: right;
+`
+export const Acount = styled.Text`
+    font-size: 16px;
+    flex: 1;
+    color: ${({ }) => theme.COLORS.PURPLEDARK1};
+    line-height: 20px;
+    font-family: ${({ }) => theme.FONTS.POPPINSMEDIUM};
+    text-align: right;
+`
+export const Status = styled.Text`
+    font-size: 16px;
+    flex: 1;
+    color: ${({ }) => theme.COLORS.PURPLEDARK1};
+    line-height: 20px;
+    font-family: ${({ }) => theme.FONTS.POPPINSMEDIUM};
+    text-align: right;
+`
+export const Validity = styled.Text`
+     font-size: 16px;
+    flex: 1;
+    color: ${({ }) => theme.COLORS.PURPLEDARK1};
+    line-height: 20px;
+    font-family: ${({ }) => theme.FONTS.POPPINSMEDIUM};
+    text-align: right;
+`
+
