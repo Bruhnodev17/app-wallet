@@ -6,6 +6,7 @@ export declare global {
             RecoveryPassword: undefined,
             Profile: undefined;
             AddCard: undefined;
+            DetailsCard: undefined;
         }
     }
 }

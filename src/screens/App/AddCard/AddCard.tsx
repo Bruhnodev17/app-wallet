@@ -1,12 +1,14 @@
 import React, { useRef } from 'react';
-import { View, Text, TouchableOpacity, Animated, Easing } from 'react-native';
+import { TouchableOpacity, Animated, Easing } from 'react-native';
 import { Container, Title, Content, SubTitle, ContentChip, ContentVisa } from './styles';
 import { GoBack } from '@src/components/GoBack';
+import { useNavigation } from '@react-navigation/native';
 
 export const AddCard = () => {
+    const navigation = useNavigation()
     const rotation = useRef(new Animated.Value(0)).current;
 
-    const handlePress = () => {
+    const handlePressAddCard = () => {
         Animated.timing(rotation, {
             toValue: 2,
             duration: 500,
@@ -15,6 +17,12 @@ export const AddCard = () => {
         }).start(() => {
             rotation.setValue(0);
         });
+
+        setTimeout(() => {
+            navigation.navigate('DetailsCard');
+        }, 700);
+
+
     };
 
     const spin = rotation.interpolate({
@@ -27,7 +35,7 @@ export const AddCard = () => {
             <GoBack />
             <Container>
                 <Title>Adicionar Cartão</Title>
-                <TouchableOpacity onPress={handlePress}>
+                <TouchableOpacity onPress={handlePressAddCard}>
                     <Animated.View style={{ transform: [{ rotate: spin }] }}>
                         <Content
                             source={require('../../../assets/addcard.png')}
