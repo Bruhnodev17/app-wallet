@@ -1,6 +1,6 @@
 import { View, Text } from 'react-native'
 import React from 'react'
-import { Container } from './styles'
+import { Container, ImageBalance , AmountValue} from './styles'
 
 import { Header } from "../../../components/Header"
 
@@ -13,7 +13,12 @@ export const Report = () => {
         typeReport
         appName='Relatório'/>
     <Container>
-      <Text>Report</Text>
+
+      <ImageBalance resizeMode='contain'
+      source={require('../../../assets/estatistica.png')}
+      />
+      <AmountValue>R$ 500.00</AmountValue>
+
     </Container>
     </>
   )
