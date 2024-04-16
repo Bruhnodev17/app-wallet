@@ -1,46 +1,47 @@
-import { View, Text, TouchableOpacity } from 'react-native'
 import React from 'react'
-import { Container, ViewProfile, ProfileName, ViewRight, ViewIcon } from './styles'
+import { Container } from './styles'
 import theme from '@src/styles/theme'
 
 import { Header } from "../../../components/Header"
-import { CaretRight, User } from 'phosphor-react-native'
+import {Profile} from "../../../components/Profile/"
 import { useNavigation } from '@react-navigation/native'
 
 export const Settings = () => {
     const navigation = useNavigation()
 
     const handleGoProfile = () => {
-       // navigation.navigate("")
-       console.warn("Clicou aqui")
+        // navigation.navigate("")
+        console.warn("Clicou aqui")
     }
 
     return (
         <>
             <Header appName='Configurações' />
             <Container>
+                <Profile
+                iconLeft
+                typeUser
+                name='Perfil'/>
 
-                <ViewProfile>
-                    <ViewIcon>
-                        <User
-                            size={27}
-                            weight='bold'
-                            color={theme.COLORS.PURPLEDARK2}
-                        />
-                    </ViewIcon>
+                <Profile
+                iconLeft
+                typeNotification
+                name='Notificações'/>
 
-                    <ViewRight>
-                        <ProfileName>Manoel Bruno</ProfileName>
-                        <TouchableOpacity onPress={handleGoProfile}>
-                            <CaretRight
-                                size={25}
-                                weight='bold'
-                                color={theme.COLORS.GRAY3} />
-                        </TouchableOpacity>
-                    </ViewRight>
+                <Profile
+                iconLeft
+                typeWallet
+                name='Minha Carteira'/>
 
-                </ViewProfile>
+                <Profile
+                iconLeft
+                typeLogin
+                name='Configuração Login'/>
 
+                <Profile
+                iconLeft
+                typeCall
+                name='Central de Serviço'/>
             </Container>
         </>
     )
