@@ -18,7 +18,10 @@ export const Settings = () => {
 
     return (
         <>
-            <Header appName='Configurações' />
+            <Header
+            typeConfig
+            iconLeft
+            appName='Configurações' />
             <Container>
                 <Profile
                     iconLeft

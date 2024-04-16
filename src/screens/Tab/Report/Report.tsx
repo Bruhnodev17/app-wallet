@@ -8,7 +8,10 @@ import { Header } from "../../../components/Header"
 export const Report = () => {
   return (
     <>
-    <Header appName='Relatório'/>
+    <Header
+        iconLeft
+        typeReport
+        appName='Relatório'/>
     <Container>
       <Text>Report</Text>
     </Container>

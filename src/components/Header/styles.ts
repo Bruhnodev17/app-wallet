@@ -1,9 +1,9 @@
 import styled from "styled-components/native";
-import { Platform } from "react-native";
+import { Platform, Pressable } from "react-native";
 import theme from "@src/styles/theme";
 
 export const Container = styled.View`
-    margin-top: ${Platform.OS === "ios" ? 0 : 25}px;
+    margin-top: ${Platform.OS === "ios" ? 10 : 25}px;
     width: 100%;
     padding: 30px;
     flex-direction: row;
@@ -14,7 +14,7 @@ export const ContentHeader = styled.View`
     width: 100%;
     padding: 10px;
     justify-content: center;
-    margin-top: 20px;
+    flex: 1;
 `
 
 export const Avatar = styled.Image`
@@ -37,4 +37,11 @@ export const Status = styled.Text`
     color: ${({ }) => theme.COLORS.GRAY4};
     font-family: ${({}) => theme.FONTS.POPPINSMEDIUM};
     margin-left: 10px;
+`
+
+
+export const IconButton = styled(Pressable)`
+    width: 40px;
+    height: 40px;
+    margin-top: 10px;
 `
