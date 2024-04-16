@@ -23,17 +23,13 @@ interface IProfile {
     typeWallet?: boolean;
     typeLogin?: boolean;
     typeCall?: boolean;
+    onPress: () => void;
 }
 
 export const Profile = ({
-    name, iconLeft, iconRight, typeUser, typeNotification, typeWallet, typeLogin, typeCall
+    name, iconLeft, iconRight, typeUser, typeNotification, typeWallet, typeLogin, typeCall, onPress,
 }: IProfile) => {
     const navigation = useNavigation()
-
-    const handleGoProfile = () => {
-        // navigation.navigate("")
-        console.warn("Clicou aqui")
-    }
 
     return (
         <>
@@ -95,7 +91,7 @@ export const Profile = ({
 
                     <ViewRight>
                         <ProfileName>{name}</ProfileName>
-                        <TouchableOpacity onPress={handleGoProfile}>
+                        <TouchableOpacity onPress={onPress}>
                             <CaretRight
                                 size={25}
                                 weight='bold'
