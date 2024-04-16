@@ -46,8 +46,28 @@ export const ViewIcon = styled.View.attrs({
     height: 50px;
     background-color: ${({ }) => theme.COLORS.GRAY5};
     border-radius: 50px;
+`
 
+export const ViewFooter = styled.View`
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+`
 
+export const ViewIconButton = styled.View`
+    padding: 10px;
+    border-radius: 50px;
+    border-width: 1px;
+    border-color: ${({}) => theme.COLORS.GRAY5};
+    margin-bottom: 10px;
 
+`
+
+export const TitleFooter = styled.Text`
+    font-size: 20px;
+    color: ${({}) => theme.COLORS.PURPLE};
+    font-family: ${({})=> theme.FONTS.POPPINSREGULAR};
+    margin-bottom: 30px;
+    text-align: center;
 `
 

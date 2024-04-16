@@ -1,8 +1,8 @@
 import { View, Text, TouchableOpacity } from 'react-native'
 import React from 'react'
-import { Container, ViewProfile, ProfileName, ViewRight, ViewIcon } from './styles'
+import { Container, ViewProfile, ProfileName, ViewRight, ViewIcon, } from './styles'
 import theme from '@src/styles/theme'
-import { Header } from '../Header'
+
 
 import {
     BellSimple,
@@ -99,13 +99,15 @@ export const Profile = ({
                             <CaretRight
                                 size={25}
                                 weight='bold'
-                                color={theme.COLORS.GRAY3} />
+                                color={theme.COLORS.PURPLE} />
                         </TouchableOpacity>
                     </ViewRight>
 
                 </ViewProfile>
 
             </Container>
+
+
         </>
     )
 }

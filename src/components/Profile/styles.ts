@@ -46,7 +46,7 @@ export const ViewIcon = styled.View.attrs({
     background-color: ${({ }) => theme.COLORS.GRAY5};
     border-radius: 50px;
 
-
-
 `
+
+
 

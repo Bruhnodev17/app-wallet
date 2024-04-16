@@ -1,10 +1,13 @@
 import React from 'react'
-import { Container } from './styles'
+import { Container,ViewFooter, TitleFooter, ViewIconButton } from './styles'
 import theme from '@src/styles/theme'
+import { TouchableOpacity } from 'react-native'
+
 
 import { Header } from "../../../components/Header"
 import {Profile} from "../../../components/Profile/"
 import { useNavigation } from '@react-navigation/native'
+import { SignOut } from 'phosphor-react-native'
 
 export const Settings = () => {
     const navigation = useNavigation()
@@ -43,6 +46,18 @@ export const Settings = () => {
                 typeCall
                 name='Central de Serviço'/>
             </Container>
+
+            <ViewFooter>
+                    <TouchableOpacity>
+                    <ViewIconButton>
+                    <SignOut
+                                size={32}
+                                weight='light'
+                                color={theme.COLORS.PURPLE1} />
+                     </ViewIconButton>
+                    </TouchableOpacity>
+                    <TitleFooter>Sair da Wallet</TitleFooter>
+                </ViewFooter>
         </>
     )
 }
