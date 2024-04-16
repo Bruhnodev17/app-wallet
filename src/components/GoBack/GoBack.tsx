@@ -12,9 +12,9 @@ export const GoBack = () => {
   return (
     <Container onPress={() => navigation.goBack()}>
      <CaretCircleLeft
-     size={35}
-     weight='bold'
-    color={theme.COLORS.GRAY2}
+     size={45}
+     weight='regular'
+    color={theme.COLORS.PURPLE}
      />
     </Container>
   )
