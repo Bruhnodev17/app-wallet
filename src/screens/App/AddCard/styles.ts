@@ -40,3 +40,22 @@ export const SubTitle = styled.Text`
     font-family: ${({}) => theme.FONTS.POPPINSREGULAR};
 
 `
+
+export const ContentChip = styled.Image`
+    width: 35px;
+    height: 40px;
+    position: absolute;
+    top: 70px;
+    left: 50px;
+`
+
+export const ContentVisa = styled.Image`
+    width: 110px;
+    height: 50px;
+    position: absolute;
+    bottom: 30px;
+    right: 5px;
+    background-color: transparent;
+    border-radius: 50%;
+
+`
