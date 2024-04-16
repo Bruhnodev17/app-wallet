@@ -1,6 +1,8 @@
 import { View, Text, TouchableOpacity, FlatList, ScrollView } from 'react-native'
 import React from 'react'
 
+import { useNavigation } from '@react-navigation/native'
+
 import {
     Container, Content, ViewContent,
     ViewBalanceLeft, ViewBalanceRight, TitleValue, TitleCard,
@@ -15,6 +17,9 @@ import { Header } from '@src/components/Header/Header'
 import { transaction } from '@src/utils/transctions'
 
 export const Wallet = () => {
+
+    const navigation = useNavigation()
+
     return (
         <Container>
             <Header appName='Wallet' isActiveText AvatarRight />
@@ -42,17 +47,19 @@ export const Wallet = () => {
 
                     <TouchableOpacity style={{ alignItems: "center" }}>
                         <IconPayment source={require('../../../assets/convert.png')} />
-                        <TitleIcon>Pagamentos</TitleIcon>
+                        <TitleIcon>Forma Pagto</TitleIcon>
                     </TouchableOpacity>
 
                     <TouchableOpacity style={{ alignItems: "center" }}>
                         <IconPayOut source={require('../../../assets/money-send.png')} />
-                        <TitleIcon>Pagamento</TitleIcon>
+                        <TitleIcon>Pagtos</TitleIcon>
                     </TouchableOpacity>
 
-                    <TouchableOpacity style={{ alignItems: "center" }}>
+                    <TouchableOpacity
+                    onPress={()=> navigation.navigate('AddCard')}
+                    style={{ alignItems: "center" }}>
                         <IconTopUp source={require('../../../assets/add-circle.png')} />
-                        <TitleIcon>Mais Opções</TitleIcon>
+                        <TitleIcon>Adiconar Cartão</TitleIcon>
                     </TouchableOpacity>
 
                 </BodyButtons>
