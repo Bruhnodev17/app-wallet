@@ -20,6 +20,10 @@ export const Wallet = () => {
 
     const navigation = useNavigation()
 
+    const handleGoTransaction = () =>{
+        navigation.navigate('Transaction')
+    }
+
     return (
         <Container>
             <Header appName='Wallet' isActiveText AvatarRight />
@@ -89,7 +93,7 @@ export const Wallet = () => {
                         ListHeaderComponent={
                             <ContentFlatHeader>
                                     <Title>Minhas transações</Title>
-                                    <ButtonShowAll>
+                                    <ButtonShowAll onPress={handleGoTransaction}>
                                         <ButtonTitleShowAll>Ver Todos</ButtonTitleShowAll>
                                     </ButtonShowAll>
                                 </ContentFlatHeader>
