@@ -1,5 +1,6 @@
 import styled from "styled-components/native";
 import theme from "@src/styles/theme";
+import { Pressable } from "react-native";
 
 export const Container = styled.View`
     flex: 1;
@@ -67,3 +68,13 @@ export const AmountTransaction = styled.Text`
     color: ${({}) => theme.COLORS.GRAY3};
     font-family: ${({}) => theme.FONTS.POPPINSREGULAR};
     `
+
+export const ButtonGoBack = styled(Pressable)`
+    position: absolute;
+    background-color: ${({}) => theme.COLORS.GRAY5};
+    bottom: 70px;
+    border-radius: 30px;
+    padding: 10px;
+    right: 20px;
+
+`
