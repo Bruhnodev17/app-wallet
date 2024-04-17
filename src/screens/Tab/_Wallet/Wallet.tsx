@@ -14,7 +14,7 @@ import {
 } from './styles'
 
 import { Header } from '@src/components/Header/Header'
-import { transaction } from '@src/utils/transctions'
+import { limitedTransaction } from '@src/utils/limited-transactions'
 
 export const Wallet = () => {
 
@@ -26,7 +26,7 @@ export const Wallet = () => {
 
     return (
         <Container>
-            <Header appName='Wallet' isActiveText AvatarRight />
+            <Header appName='Wallet' isActiveText AvatarRight iconLeft typeWallet />
 
             <ViewContent>
                 <Content>
@@ -72,7 +72,7 @@ export const Wallet = () => {
 
             <FooterList>
                     <FlatList
-                        data={transaction}
+                        data={limitedTransaction}
                         renderItem={({ item }) => (
                             <ScrollView scrollEnabled={true} >
                             <ContentFlat>

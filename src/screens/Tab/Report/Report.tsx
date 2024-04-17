@@ -10,9 +10,16 @@ import {
 
 import { Header } from "../../../components/Header"
 import { FlatList, ScrollView, } from 'react-native'
-import { transaction } from '@src/utils/transctions'
+import { limitedTransaction } from '@src/utils/limited-transactions'
+import { useNavigation } from '@react-navigation/native'
 
 export const Report = () => {
+    const navigation = useNavigation()
+
+    const handleGoTransaction = () =>{
+        navigation.navigate('Transaction')
+    }
+
     return (
         <>
             <Header
@@ -35,7 +42,7 @@ export const Report = () => {
 
                 <FooterList>
                     <FlatList
-                        data={transaction}
+                        data={limitedTransaction}
                         renderItem={({ item }) => (
                             <ScrollView scrollEnabled={true} >
                                 <ContentFlat>
@@ -56,7 +63,7 @@ export const Report = () => {
                         ListHeaderComponent={
                             <ContentFlatHeader>
                                 <Title>Minhas transações</Title>
-                                <ButtonShowAll>
+                                <ButtonShowAll onPress={handleGoTransaction}>
                                     <ButtonTitleShowAll>Mais Recentes</ButtonTitleShowAll>
                                 </ButtonShowAll>
                             </ContentFlatHeader>

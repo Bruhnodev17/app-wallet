@@ -8,21 +8,22 @@ import {
     Status,
     IconButton
 } from './styles'
-import { BellSimpleRinging, ChartBarHorizontal, CurrencyCircleDollar, GearSix,  } from 'phosphor-react-native';
+import { BellSimpleRinging, ChartBarHorizontal, CurrencyCircleDollar, GearSix, Wallet,  } from 'phosphor-react-native';
 
 interface IHeader {
     iconLeft?: boolean;
     typeReport?: boolean
     typeNotification?: boolean;
     typeConfig?: boolean;
-    typeCash?: boolean
+    typeCash?: boolean;
+    typeWallet?: boolean;
     appName: string;
     isActiveText?: boolean;
     AvatarRight?: boolean;
 }
 
 export const Header = ({
-    appName, isActiveText, AvatarRight, iconLeft, typeReport, typeNotification, typeConfig, typeCash
+    appName, isActiveText, AvatarRight, iconLeft, typeReport, typeNotification, typeConfig, typeCash,typeWallet
 }: IHeader) => {
     return (
         <Container>
@@ -44,6 +45,11 @@ export const Header = ({
                     {typeCash && (
 
                         <CurrencyCircleDollar size={32} weight='bold' style={{marginTop:6}} />
+
+                    )}
+                    {typeWallet && (
+
+                        <Wallet size={30} weight='bold' style={{marginTop:15}} />
 
                     )}
                 </>

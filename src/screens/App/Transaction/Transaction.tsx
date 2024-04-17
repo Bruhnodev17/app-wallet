@@ -18,7 +18,7 @@ export const Transaction = () => {
     }
   return (
     <>
-    <Header appName='Transações'
+    <Header appName='Minhas Transações'
     iconLeft
     typeCash
     />

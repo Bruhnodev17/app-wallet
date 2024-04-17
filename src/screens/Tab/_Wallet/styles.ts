@@ -134,7 +134,6 @@ export const ButtonTitleShowAll = styled.Text`
 export const IconTransaction = styled.Image`
     width: 60px;
     height: 60px;
-
 `
 
 export const DetailsTransaction = styled.View`
