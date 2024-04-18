@@ -32,9 +32,7 @@ import {} from "./routes"
         DMSans_400Regular,
         DMSerifDisplay_400Regular,
     })
-    if (!fontsLoaded) {
-        return <AppLoading />
-    }
+
     return (
         <ThemeProvider theme={COLORS}>
             <NavigationContainer>
