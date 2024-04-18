@@ -1,17 +1,19 @@
-import { View, Text, FlatList } from 'react-native'
-import React from 'react'
+import { FlatList } from 'react-native'
+import React, {useState} from 'react'
+import { ContentTop } from '@src/components/Notification/ContentTop'
+
+
+import { Header } from "../../../components/Header"
+import theme from '@src/styles/theme'
+import { recents_notifications } from '@src/utils/recent-notifications'
+import { new_notifications } from '@src/utils/new-notifications'
+import { ArrowCircleUp } from 'phosphor-react-native'
+
 import {
-    Container, ContentTop, ContentTopTitle, ContentBody, ContentBodyTitle, NewFlatList, RecentFlatList, ContentFlat, DataNotification, DataNotificationText, NewNotificationFlat,
+    Container, ContentHeader, ContentTopTitle, ContentBody, ContentBodyTitle, ContentFlat, DataNotification, DataNotificationText, NewNotificationFlat,
     TitleNotification, TitleNotificationText, DescriptionNotification, DescriptionNotificationText,
     IconNotification
 } from './styles'
-
-import { new_notifications } from '@src/utils/new-notifications'
-
-import { Header } from "../../../components/Header"
-import { ArrowCircleUp } from 'phosphor-react-native'
-import theme from '@src/styles/theme'
-import { recents_notifications } from '@src/utils/recent-notifications'
 
 
 export const Notification = () => {
@@ -23,45 +25,21 @@ export const Notification = () => {
                 appName='Notificações' />
             <Container>
 
-                <ContentTop>
+                <ContentHeader>
                     <ContentTopTitle>Novo</ContentTopTitle>
                     <FlatList
                         data={new_notifications}
                         renderItem={({ item }) => (
-                            <ContentFlat>
-                                <NewNotificationFlat>
-
-                                    <DataNotification>
-                                        <DataNotificationText>
-                                            {item.datetime}
-                                        </DataNotificationText>
-                                    </DataNotification>
-
-                                    <TitleNotification>
-                                        <TitleNotificationText>
-                                            {item.title}
-                                        </TitleNotificationText>
-                                    </TitleNotification>
-
-                                    <DescriptionNotification>
-                                        <DescriptionNotificationText>
-                                            {item.type}
-                                        </DescriptionNotificationText>
-                                    </DescriptionNotification>
-
-                                </NewNotificationFlat>
-
-                                <IconNotification>
-                                    <ArrowCircleUp size={32} weight='bold' color={theme.COLORS.GREEN1} />
-                                </IconNotification>
-
-
-                            </ContentFlat>
+                           <ContentTop
+                           datetime={item.datetime}
+                           title={item.title}
+                           type={item.type}
+                           />
                         )}
                         showsVerticalScrollIndicator={false}
                     />
 
-                </ContentTop>
+                </ContentHeader>
 
                 <ContentBody>
                     <ContentBodyTitle>Recentes</ContentBodyTitle>

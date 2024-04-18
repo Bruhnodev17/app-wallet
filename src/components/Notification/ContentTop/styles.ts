@@ -1,30 +1,14 @@
 import styled from "styled-components/native";
+
 import theme from "@src/styles/theme";
-import { FlatList } from "react-native";
 
-export const Container = styled.View`
-    flex: 1;
-    align-items: center;
-`
 
-export const ContentHeader = styled.View`
+
+export const ContentTop = styled.View`
     width: 100%;
     height: 40%;
     align-items: center;
     padding: 0 10px;
-`
-
-export const ContentTopTitle = styled.Text`
-    font-size: 20px;
-    font-family:${({}) => theme.FONTS.POPPINSBOLD};
-    color: ${({}) => theme.COLORS.PURPLE};
-
-`
-
-export const ContentBodyTitle = styled.Text`
-    font-size: 20px;
-    font-family:${({}) => theme.FONTS.POPPINSBOLD};
-    color: ${({}) => theme.COLORS.PURPLE};
 `
 
 export const ContentFlat = styled.View`
@@ -40,12 +24,7 @@ export const NewNotificationFlat = styled.View`
     height: 100px;
 `
 
-export const NewFlatList = styled(FlatList).attrs({
-    showsVerticalScrollIndicator: false,
 
-})
-`
-`
 
 export const IconNotification = styled.TouchableOpacity`
     width: 50px;
@@ -62,7 +41,7 @@ export const DataNotification = styled.View`
 
 export const DataNotificationText = styled.Text`
     font-size: 12px;
-    color: ${({}) => theme.COLORS.GRAY4};
+    color: ${({ }) => theme.COLORS.GRAY4};
     margin-bottom: 5px;
 `
 
@@ -81,25 +60,13 @@ export const DescriptionNotification = styled.View`
 
 export const DescriptionNotificationText = styled.Text`
     font-size: 14px;
-    color: ${({}) => theme.COLORS.PURPLE};
+    color: ${({ }) => theme.COLORS.PURPLE};
     margin-top: 10px;
 `
 
 
-export const RecentFlatList = styled(FlatList).attrs({
-    showsVerticalScrollIndicator: false,
 
-})
-`
 
-`
-
-export const ContentBody = styled.View`
-    flex: 1;
-    width: 100%;
-    align-items: center;
-    padding: 0;
-`
 
 
 
