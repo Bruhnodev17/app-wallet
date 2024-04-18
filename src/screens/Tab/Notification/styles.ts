@@ -9,9 +9,9 @@ export const Container = styled.View`
 
 export const ContentTop = styled.View`
     width: 100%;
-    height: 50%;
+    height: 40%;
     align-items: center;
-    padding: 20px 10px;
+    padding: 0 10px;
 `
 
 export const ContentTopTitle = styled.Text`
@@ -21,15 +21,8 @@ export const ContentTopTitle = styled.Text`
 
 `
 
-export const ContentBody = styled.View`
-    flex: 1;
-    width: 100%;
-    align-items: center;
-    padding: 20px 10px;
-`
-
 export const ContentBodyTitle = styled.Text`
-    font-size: 24px;
+    font-size: 20px;
     font-family:${({}) => theme.FONTS.POPPINSBOLD};
     color: ${({}) => theme.COLORS.PURPLE};
 `
@@ -93,17 +86,19 @@ export const DescriptionNotificationText = styled.Text`
 `
 
 
-
-
-//
-
-
 export const RecentFlatList = styled(FlatList).attrs({
     showsVerticalScrollIndicator: false,
 
 })
 `
 
+`
+
+export const ContentBody = styled.View`
+    flex: 1;
+    width: 100%;
+    align-items: center;
+    padding: 0;
 `
 
 
