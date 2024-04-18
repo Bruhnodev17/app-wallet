@@ -5,10 +5,9 @@ import theme from '@src/styles/theme'
 import {
     ContentFlat, DataNotification, DataNotificationText, NewNotificationFlat,
     TitleNotification, TitleNotificationText, DescriptionNotification, DescriptionNotificationText,
-    IconNotification
+    IconNotification, BadgeIcon
 } from './styles'
 import { ArrowCircleUp } from 'phosphor-react-native'
-import { new_notifications } from '@src/utils/new-notifications'
 
 interface IcContentTopProps {
     datetime: string;
@@ -27,6 +26,7 @@ export const ContentTop = (item: IcContentTopProps) => {
 
     return (
         <ContentFlat>
+             <BadgeIcon />
             <NewNotificationFlat>
 
                 <DataNotification>
@@ -60,7 +60,9 @@ export const ContentTop = (item: IcContentTopProps) => {
                         {theme.COLORS.RED} />
                 </IconNotification>
             )}
+
         </ContentFlat>
+
     )
 }
 

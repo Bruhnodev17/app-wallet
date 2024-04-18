@@ -22,6 +22,7 @@ export const NewNotificationFlat = styled.View`
     padding: 10px;
     width: 90%;
     height: 100px;
+    padding-left:5px
 `
 
 
@@ -32,7 +33,7 @@ export const IconNotification = styled.TouchableOpacity`
     justify-content: center;
     position: absolute;
     right: 0;
-    top: 5;
+    top: 35;
 `
 
 export const DataNotification = styled.View`
@@ -64,6 +65,16 @@ export const DescriptionNotificationText = styled.Text`
     margin-top: 10px;
 `
 
+
+export const BadgeIcon = styled.View`
+    background-color: ${({}) => theme.COLORS.RED};
+    width: 15px;
+    height: 15px;
+    border-radius: 10px;
+    position: absolute;
+    right: 0;
+    top: 0px;
+`
 
 
 
