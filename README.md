@@ -14,7 +14,7 @@
     <br />
 </h1>
 
-🚀 Você ira encontrar uma lista de funcionalidade do projeto que foi implementado. Vamos utilizar banco de dados na nuvem para gerenciar todas as informações geradas pelo sistema.📄
+🚀 Você irá encontrar uma lista de funcionalidade do projeto que foi implementado. Vamos utilizar banco de dados na nuvem para gerenciar todas as informações geradas pelo sistema.📄
 
 ### Features
 
@@ -38,7 +38,7 @@ Atualmente o projeto não necessita de nenhuma variável ambiente, então, é si
 
 ```bash
 # Clonar o repositório
-$ git clonehttps://github.com/SilvaneiMartins/wallet-app
+$ git clonehttps://github.com/Bruhnodev17/wallet-app
 
 # Acessar a pasta do projeto
 $ cd wallet-app
@@ -60,6 +60,7 @@ $ npm install
 
 Aqui tem link de algumas das tecnologias utilizada no projeto.
 
+-   [TYPESCRIPT](https://www.typescriptlang.org/)
 -   [REACT](https://pt-br.reactjs.org)
 -   [YUP](https://github.com/jquense/yup)
 -   [REACT-NATIVE](https://reactnative.dev/)
